@@ -11,6 +11,8 @@ app.use(express.urlencoded({ extended: false })); // to get the data from the fo
 //routes
 app.use("/api/products",productRoute);
 
+
+// conect to mongodb
 mongoose
   .connect(
     "mongodb+srv://apichawork14994:JHXnrWGd1MrZ1TRx@backendapi.alsk5ob.mongodb.net/Node-API?retryWrites=true&w=majority&appName=BackendApi"

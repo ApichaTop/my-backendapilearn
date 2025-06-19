@@ -1,6 +1,7 @@
 const { get } = require("mongoose");
 const Product = require("../models/product.model");
 
+// get all product
 const getProducts = async (req, res) => {
   try {
     const product = await Product.find({});
@@ -10,6 +11,7 @@ const getProducts = async (req, res) => {
   }
 };
 
+// get single product by id
 const getsingleProduct = async (req, res) => {
   try {
     const { id } = req.params;
@@ -20,6 +22,7 @@ const getsingleProduct = async (req, res) => {
   }
 };
 
+// create product
 const createProduct = async (req, res) => {
   try {
     const product = await Product.create(req.body);
@@ -29,6 +32,7 @@ const createProduct = async (req, res) => {
   }
 };
 
+// update product by id
 const updateProduct = async (req, res) => {
   try {
     const { id } = req.params;
@@ -43,6 +47,7 @@ const updateProduct = async (req, res) => {
   }
 };
 
+// delete product by id
 const delteProduct = async (req, res) => {
   try {
     const { id } = req.params;
@@ -58,6 +63,7 @@ const delteProduct = async (req, res) => {
   }
 };
 
+// export functions
 module.exports = {
   getProducts,
   getsingleProduct,
